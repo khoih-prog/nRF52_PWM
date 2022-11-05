@@ -65,7 +65,7 @@
 
 ### Features
 
-This hardware-based PWM library enables you to use Hardware-PWM on **nRF52-based boards, such as AdaFruit Itsy-Bitsy nRF52840, Feather nRF52840 Express, Seeed XIAO nRF52840, Seeed XIAO nRF52840 Sense**, to create and output PWM. These purely hardware-based PWM channels can generate very high PWM frequencies, depending on CPU clock and acceptable accuracy. The maximum resolution is only **8-bit** resolution.
+This hardware-based PWM library enables you to use Hardware-PWM on **nRF52-based boards, such as AdaFruit Itsy-Bitsy nRF52840, Feather nRF52840 Express, Seeed XIAO nRF52840, Seeed XIAO nRF52840 Sense**, to create and output PWM. These purely hardware-based PWM channels can generate very high PWM frequencies, depending on CPU clock and acceptable accuracy. The maximum and default resolution is **16-bit** resolution.
 
 ---
 
