@@ -67,6 +67,20 @@
 
 This hardware-based PWM library enables you to use Hardware-PWM on **nRF52-based boards, such as AdaFruit Itsy-Bitsy nRF52840, Feather nRF52840 Express, Seeed XIAO nRF52840, Seeed XIAO nRF52840 Sense**, to create and output PWM. These purely hardware-based PWM channels can generate very high PWM frequencies, depending on CPU clock and acceptable accuracy. The maximum and default resolution is **16-bit** resolution.
 
+This library is using the **same or similar functions** as other FastPWM libraries, as follows, to enable you to **port your PWM code easily between platforms**
+
+- [**RP2040_PWM**](https://github.com/khoih-prog/RP2040_PWM)
+- [**Teensy_PWM**](https://github.com/khoih-prog/Teensy_PWM)
+- [**AVR_PWM**](https://github.com/khoih-prog/AVR_PWM)
+- [**megaAVR_PWM**](https://github.com/khoih-prog/megaAVR_PWM)
+- [**ESP32_FastPWM**](https://github.com/khoih-prog/ESP32_FastPWM)
+- [**SAMD_PWM**](https://github.com/khoih-prog/SAMD_PWM)
+- [**SAMDUE_PWM**](https://github.com/khoih-prog/SAMDUE_PWM)
+- [**Portenta_H7_PWM**](https://github.com/khoih-prog/Portenta_H7_PWM)
+- [**MBED_RP2040_PWM**](https://github.com/khoih-prog/MBED_RP2040_PWM)
+- [**nRF52_MBED_PWM**](https://github.com/khoih-prog/nRF52_MBED_PWM)
+- [**STM32_PWM**](https://github.com/khoih-prog/STM32_PWM)
+
 ---
 
 The most important feature is they're purely hardware-based PWM channels. Therefore, their operations are **not blocked by bad-behaving software functions / tasks**.
