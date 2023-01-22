@@ -42,6 +42,7 @@
   * [ 5. PWM_Multi](examples/PWM_Multi)
   * [ 6. PWM_MultiChannel](examples/PWM_MultiChannel)
   * [ 7. PWM_Waveform](examples/PWM_Waveform)
+  * [ 8. PWM_StepperControl](examples/PWM_StepperControl) **New**
 * [Example PWM_Multi](#example-PWM_Multi)
 * [Debug Terminal Output Samples](#debug-terminal-output-samples)
   * [1. PWM_DynamicDutyCycle on NRF52840_FEATHER](#1-PWM_DynamicDutyCycle-on-NRF52840_FEATHER)
@@ -132,7 +133,7 @@ Functions using normal software-based PWMs, relying on `loop()` and calling `mil
 
  1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
  2. [`Adafruit nRF52 v1.3.0+`](https://github.com/adafruit/Adafruit_nRF52_Arduino) for nRF52 boards such as Adafruit NRF52840_FEATHER, NRF52832_FEATHER, NRF52840_FEATHER_SENSE, NRF52840_ITSYBITSY, NRF52840_CIRCUITPLAY, NRF52840_CLUE, NRF52840_METRO, NRF52840_PCA10056, PARTICLE_XENON, **NINA_B302_ublox**, etc. [![GitHub release](https://img.shields.io/github/release/adafruit/Adafruit_nRF52_Arduino.svg)](https://github.com/adafruit/Adafruit_nRF52_Arduino/releases/latest)
- 3. [`Seeeduino nRF52 core 1.0.0+`](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino) for Seeeduino nRF52840-based boards such as **Seeed_XIAO_NRF52840 and Seeed_XIAO_NRF52840_SENSE**. [![GitHub release](https://img.shields.io/github/release/Seeed-Studio/Adafruit_nRF52_Arduino.svg)](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/releases/latest)
+ 3. [`Seeeduino nRF52 core 1.1.0+`](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino) for Seeeduino nRF52840-based boards such as **Seeed_XIAO_NRF52840 and Seeed_XIAO_NRF52840_SENSE**. [![GitHub release](https://img.shields.io/github/release/Seeed-Studio/Adafruit_nRF52_Arduino.svg)](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/releases/latest)
 
 ---
 ---
@@ -324,6 +325,7 @@ PWM_Instance->setPWM_manual(PWM_Pins, new_level);
  5. [PWM_Multi](examples/PWM_Multi)
  6. [PWM_MultiChannel](examples/PWM_MultiChannel)
  7. [PWM_Waveform](examples/PWM_Waveform)
+ 8. [PWM_StepperControl](examples/PWM_StepperControl) **New**
 
  
 ---
@@ -346,7 +348,7 @@ The following is the sample terminal output when running example [PWM_DynamicDut
 
 ```cpp
 Starting PWM_DynamicDutyCycle on NRF52840_FEATHER
-nRF52_PWM v1.0.0
+nRF52_PWM v1.0.1
 [PWM] nRF52_PWM: NRF52_PWM_TOKEN = 0x345CD8
 [PWM] calcPrescaler: OK  period = 200 , _prescaler = 1 , countTOP = 3200
 [PWM] calcPrescaler: _dutycycle = 0 , frequency = 5000.00 , _prescalerConfigBits = 0 , _compareValue = 3199
@@ -387,7 +389,7 @@ The following is the sample terminal output when running example [**PWM_Multi**]
 
 ```cpp
 Starting PWM_Multi on NRF52840_FEATHER
-nRF52_PWM v1.0.0
+nRF52_PWM v1.0.1
 [PWM] nRF52_PWM: NRF52_PWM_TOKEN = 0x389838
 [PWM] calcPrescaler: OK  period = 500 , _prescaler = 1 , countTOP = 8000
 [PWM] calcPrescaler: _dutycycle = 6553 , frequency = 2000.00 , _prescalerConfigBits = 0 , _compareValue = 7999
@@ -449,7 +451,7 @@ The following is the sample terminal output when running example [**PWM_DynamicF
 
 ```cpp
 Starting PWM_DynamicFreq on NRF52840_FEATHER
-nRF52_PWM v1.0.0
+nRF52_PWM v1.0.1
 [PWM] nRF52_PWM: NRF52_PWM_TOKEN = 0x2B8A8B
 [PWM] calcPrescaler: OK  period = 100 , _prescaler = 1 , countTOP = 1600
 [PWM] calcPrescaler: _dutycycle = 32768 , frequency = 10000.00 , _prescalerConfigBits = 0 , _compareValue = 1599
@@ -488,7 +490,7 @@ The following is the sample terminal output when running example [**PWM_Waveform
 
 ```cpp
 Starting PWM_Waveform on NRF52840_FEATHER
-nRF52_PWM v1.0.0
+nRF52_PWM v1.0.1
 [PWM] setPWM_Int: dutycycle = 0 , frequency = 2000.00
 ============================================================================================
 Actual data: pin = 6, PWM DutyCycle = 0.00, PWMPeriod = 500.00, PWM Freq (Hz) = 2000.0000
@@ -546,7 +548,7 @@ The following is the sample terminal output when running example [**PWM_Waveform
 
 ```cpp
 Starting PWM_Waveform on NRF52840_ITSYBITSY
-nRF52_PWM v1.0.0
+nRF52_PWM v1.0.1
 [PWM] setPWM_Int: dutycycle = 0 , frequency = 2000.00
 ============================================================================================
 Actual data: pin = 7, PWM DutyCycle = 0.00, PWMPeriod = 500.00, PWM Freq (Hz) = 2000.0000
@@ -639,6 +641,8 @@ Submit issues to: [nRF52_PWM issues](https://github.com/khoih-prog/nRF52_PWM/iss
  1. Basic hardware PWM-channels for **nRF52-based boards, such as AdaFruit Itsy-Bitsy nRF52840, Feather nRF52840 Express, Seeed XIAO nRF52840, Seeed XIAO nRF52840 Sense**, etc. using 
  - [`Adafruit nRF52 core`](https://github.com/adafruit/Adafruit_nRF52_Arduino) or 
  - [`Seeeduino nRF52 core`](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino)
+ 2. Add example [PWM_StepperControl](https://github.com/khoih-prog/nRF52_PWM/tree/main/examples/PWM_StepperControl) to demo how to control Stepper Motor using PWM
+ 
  
 ---
 ---
@@ -647,12 +651,22 @@ Submit issues to: [nRF52_PWM issues](https://github.com/khoih-prog/nRF52_PWM/iss
 
 Many thanks for everyone for bug reporting, new feature suggesting, testing and contributing to the development of this library.
 
+1. Thanks to [Paul van Dinther](https://github.com/dinther) for proposing new way to use PWM to drive Stepper-Motor in [Using PWM to step a stepper driver #16](https://github.com/khoih-prog/RP2040_PWM/issues/16), leading to v2.0.3
+
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/dinther"><img src="https://github.com/dinther.png" width="100px;" alt="dinther"/><br /><sub><b>Paul van Dinther</b></sub></a><br /></td>
+  </tr>
+</table>
+
 
 ---
 
 ## Contributing
 
 If you want to contribute to this project:
+
 - Report bugs and errors
 - Ask for enhancements
 - Create issues and pull requests

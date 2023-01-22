@@ -7,11 +7,12 @@
   Built by Khoi Hoang https://github.com/khoih-prog/nRF52_PWM
   Licensed under MIT license
 
-  Version: 1.0.0
+  Version: 1.0.1
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.0.0   K Hoang      05/11/2022 Initial coding for nRF52-based boards
+  1.0.1   K Hoang      22/01/2023 Add `PWM_StepperControl` example
 *****************************************************************************************************************************/
 
 #pragma once
@@ -48,13 +49,13 @@
 ////////////////////////////////////////
 
 #ifndef NRF52_PWM_VERSION
-  #define NRF52_PWM_VERSION             "nRF52_PWM v1.0.0"
+  #define NRF52_PWM_VERSION             "nRF52_PWM v1.0.1"
 
   #define NRF52_PWM_VERSION_MAJOR       1
   #define NRF52_PWM_VERSION_MINOR       0
-  #define NRF52_PWM_VERSION_PATCH       0
+  #define NRF52_PWM_VERSION_PATCH       1
 
-  #define NRF52_PWM_VERSION_INT         1000000
+  #define NRF52_PWM_VERSION_INT         1000001
 #endif
 
 ////////////////////////////////////////
